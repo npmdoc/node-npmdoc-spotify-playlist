@@ -1,0 +1,671 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/MegaCookie/Node-Spotify-Playlist#readme">spotify-playlist (v0.0.4)</a>
+</h1>
+<h4>Get Spotify Playlist data without authentication</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.spotify-playlist">module spotify-playlist</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.spotify-playlist.playlist">
+            function <span class="apidocSignatureSpan">spotify-playlist.</span>playlist
+            <span class="apidocSignatureSpan">(user, id, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.spotify-playlist.playlistUri">
+            function <span class="apidocSignatureSpan">spotify-playlist.</span>playlistUri
+            <span class="apidocSignatureSpan">(uri, extras, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.spotify-playlist.uri">
+            function <span class="apidocSignatureSpan">spotify-playlist.</span>uri
+            <span class="apidocSignatureSpan">(uri)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">spotify-playlist.</span>index</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">spotify-playlist.</span>url</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.spotify-playlist.index">module spotify-playlist.index</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.spotify-playlist.index.playlist">
+            function <span class="apidocSignatureSpan">spotify-playlist.index.</span>playlist
+            <span class="apidocSignatureSpan">(user, id, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.spotify-playlist.index.playlistUri">
+            function <span class="apidocSignatureSpan">spotify-playlist.index.</span>playlistUri
+            <span class="apidocSignatureSpan">(uri, extras, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.spotify-playlist.index.uri">
+            function <span class="apidocSignatureSpan">spotify-playlist.index.</span>uri
+            <span class="apidocSignatureSpan">(uri)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">spotify-playlist.index.</span>url</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.spotify-playlist.uri">module spotify-playlist.uri</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.spotify-playlist.uri.uri">
+            function <span class="apidocSignatureSpan">spotify-playlist.</span>uri
+            <span class="apidocSignatureSpan">(uri)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.spotify-playlist.uri.formatEmbedURL">
+            function <span class="apidocSignatureSpan">spotify-playlist.uri.</span>formatEmbedURL
+            <span class="apidocSignatureSpan">(parsed)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.spotify-playlist.uri.formatOpenURL">
+            function <span class="apidocSignatureSpan">spotify-playlist.uri.</span>formatOpenURL
+            <span class="apidocSignatureSpan">(parsed, base)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.spotify-playlist.uri.formatPlayURL">
+            function <span class="apidocSignatureSpan">spotify-playlist.uri.</span>formatPlayURL
+            <span class="apidocSignatureSpan">(parsed)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.spotify-playlist.uri.formatURI">
+            function <span class="apidocSignatureSpan">spotify-playlist.uri.</span>formatURI
+            <span class="apidocSignatureSpan">(parsed)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.spotify-playlist.uri.parse">
+            function <span class="apidocSignatureSpan">spotify-playlist.uri.</span>parse
+            <span class="apidocSignatureSpan">(uri)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.spotify-playlist" id="apidoc.module.spotify-playlist">module spotify-playlist</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.spotify-playlist.playlist" id="apidoc.element.spotify-playlist.playlist">
+        function <span class="apidocSignatureSpan">spotify-playlist.</span>playlist
+        <span class="apidocSignatureSpan">(user, id, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">playlist = function (user, id, cb) {
+	var tracks = [];
+
+	var req = rest.get(util.format(Spotify.url.playlist, user, id)).on('complete', function(result) {
+		if (result instanceof Error) {
+    		cb('Error: ', result.message);
+    		this.retry(5000); // try again after 5 sec
+  		} else {
+			var tracks = [];
+			var $ = cheerio.load(result);
+			if($('#text').text() == ""){ //No error =D
+				$('.track-row').each(function(i, el) {
+					var track = {
+						"name": $(this).attr('data-name'),
+						"href": $(this).attr('data-uri'),
+						"artists": $(this).attr('data-artists').split(", "),
+						"duration": parseInt($(this).attr('data-duration-ms')),
+						"cover-640": $(this).attr('data-size-640'),
+						"cover-300": $(this).attr('data-size-300'),
+						"cover-64": $(this).attr('data-size-64'),
+						"number": parseInt($(this).attr('data-position'))
+					};
+
+					tracks.push(track);
+				});
+
+				var playlist = {
+					playlist: {
+						// spotify-uri supports parsing of playlist, but not formating -.-
+						'playlist-id': ['spotify', 'user', user, 'playlist', id].join(':'),
+						title: $('.context-name').text().split(" by")[0].replace(/ /g, ""),
+						tracks: tracks,
+					},
+					info: {
+						type: 'playlist'
+					}
+				}
+
+				cb('Result:', playlist);
+			}else{
+				cb('Error:', 'This playlist is empty or does not exsist');
+			}
+		}
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param  {Function} cb  Callback
+ */
+Spotify.playlistUri = function(uri, extras, cb) {
+	var parsed = typeof uri === 'string' ? Spotify.uri.parse(uri) : uri;
+
+	// Playlist
+	if (parsed.type === 'playlist') {
+		Spotify.<span class="apidocCodeKeywordSpan">playlist</span>(parsed.user, parsed.id, typeof extras==='function'?extras
+:cb);
+	}
+	// Everything else
+	else {
+		console.warn('*WARNING*: Unknown type. It only supports Spotify playlists using the default Spotify URI. Use https://github
+.com/thelinmichael/spotify-web-api-node to use the full Spotify Web API');
+	}
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.spotify-playlist.playlistUri" id="apidoc.element.spotify-playlist.playlistUri">
+        function <span class="apidocSignatureSpan">spotify-playlist.</span>playlistUri
+        <span class="apidocSignatureSpan">(uri, extras, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">playlistUri = function (uri, extras, cb) {
+	var parsed = typeof uri === 'string' ? Spotify.uri.parse(uri) : uri;
+
+	// Playlist
+	if (parsed.type === 'playlist') {
+		Spotify.playlist(parsed.user, parsed.id, typeof extras==='function'?extras:cb);
+	}
+	// Everything else
+	else {
+		console.warn('*WARNING*: Unknown type. It only supports Spotify playlists using the default Spotify URI. Use https://github.com
+/thelinmichael/spotify-web-api-node to use the full Spotify Web API');
+	}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.spotify-playlist.uri" id="apidoc.element.spotify-playlist.uri">
+        function <span class="apidocSignatureSpan">spotify-playlist.</span>uri
+        <span class="apidocSignatureSpan">(uri)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function parse(uri) {
+  var rtn;
+  var parts;
+  if ('object' == typeof uri) {
+    // re-use the `uri` Object if one is passed in
+    rtn = uri;
+    uri = rtn.uri;
+  } else {
+    rtn = { uri: uri };
+  }
+  var parsed = url.parse(uri);
+  if ('spotify:' == parsed.protocol) {
+    parts = uri.split(':');
+    parseParts(parts, rtn);
+  } else if ('embed.spotify.com' == parsed.hostname) {
+    return parse(qs.parse(parsed.query).uri);
+  } else { // http: or https:
+    parts = parsed.pathname.split('/');
+    parseParts(parts, rtn);
+  }
+  return rtn;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.spotify-playlist.index" id="apidoc.module.spotify-playlist.index">module spotify-playlist.index</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.spotify-playlist.index.playlist" id="apidoc.element.spotify-playlist.index.playlist">
+        function <span class="apidocSignatureSpan">spotify-playlist.index.</span>playlist
+        <span class="apidocSignatureSpan">(user, id, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">playlist = function (user, id, cb) {
+	var tracks = [];
+
+	var req = rest.get(util.format(Spotify.url.playlist, user, id)).on('complete', function(result) {
+		if (result instanceof Error) {
+    		cb('Error: ', result.message);
+    		this.retry(5000); // try again after 5 sec
+  		} else {
+			var tracks = [];
+			var $ = cheerio.load(result);
+			if($('#text').text() == ""){ //No error =D
+				$('.track-row').each(function(i, el) {
+					var track = {
+						"name": $(this).attr('data-name'),
+						"href": $(this).attr('data-uri'),
+						"artists": $(this).attr('data-artists').split(", "),
+						"duration": parseInt($(this).attr('data-duration-ms')),
+						"cover-640": $(this).attr('data-size-640'),
+						"cover-300": $(this).attr('data-size-300'),
+						"cover-64": $(this).attr('data-size-64'),
+						"number": parseInt($(this).attr('data-position'))
+					};
+
+					tracks.push(track);
+				});
+
+				var playlist = {
+					playlist: {
+						// spotify-uri supports parsing of playlist, but not formating -.-
+						'playlist-id': ['spotify', 'user', user, 'playlist', id].join(':'),
+						title: $('.context-name').text().split(" by")[0].replace(/ /g, ""),
+						tracks: tracks,
+					},
+					info: {
+						type: 'playlist'
+					}
+				}
+
+				cb('Result:', playlist);
+			}else{
+				cb('Error:', 'This playlist is empty or does not exsist');
+			}
+		}
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param  {Function} cb  Callback
+ */
+Spotify.playlistUri = function(uri, extras, cb) {
+	var parsed = typeof uri === 'string' ? Spotify.uri.parse(uri) : uri;
+
+	// Playlist
+	if (parsed.type === 'playlist') {
+		Spotify.<span class="apidocCodeKeywordSpan">playlist</span>(parsed.user, parsed.id, typeof extras==='function'?extras
+:cb);
+	}
+	// Everything else
+	else {
+		console.warn('*WARNING*: Unknown type. It only supports Spotify playlists using the default Spotify URI. Use https://github
+.com/thelinmichael/spotify-web-api-node to use the full Spotify Web API');
+	}
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.spotify-playlist.index.playlistUri" id="apidoc.element.spotify-playlist.index.playlistUri">
+        function <span class="apidocSignatureSpan">spotify-playlist.index.</span>playlistUri
+        <span class="apidocSignatureSpan">(uri, extras, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">playlistUri = function (uri, extras, cb) {
+	var parsed = typeof uri === 'string' ? Spotify.uri.parse(uri) : uri;
+
+	// Playlist
+	if (parsed.type === 'playlist') {
+		Spotify.playlist(parsed.user, parsed.id, typeof extras==='function'?extras:cb);
+	}
+	// Everything else
+	else {
+		console.warn('*WARNING*: Unknown type. It only supports Spotify playlists using the default Spotify URI. Use https://github.com
+/thelinmichael/spotify-web-api-node to use the full Spotify Web API');
+	}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.spotify-playlist.index.uri" id="apidoc.element.spotify-playlist.index.uri">
+        function <span class="apidocSignatureSpan">spotify-playlist.index.</span>uri
+        <span class="apidocSignatureSpan">(uri)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function parse(uri) {
+  var rtn;
+  var parts;
+  if ('object' == typeof uri) {
+    // re-use the `uri` Object if one is passed in
+    rtn = uri;
+    uri = rtn.uri;
+  } else {
+    rtn = { uri: uri };
+  }
+  var parsed = url.parse(uri);
+  if ('spotify:' == parsed.protocol) {
+    parts = uri.split(':');
+    parseParts(parts, rtn);
+  } else if ('embed.spotify.com' == parsed.hostname) {
+    return parse(qs.parse(parsed.query).uri);
+  } else { // http: or https:
+    parts = parsed.pathname.split('/');
+    parseParts(parts, rtn);
+  }
+  return rtn;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.spotify-playlist.uri" id="apidoc.module.spotify-playlist.uri">module spotify-playlist.uri</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.spotify-playlist.uri.uri" id="apidoc.element.spotify-playlist.uri.uri">
+        function <span class="apidocSignatureSpan">spotify-playlist.</span>uri
+        <span class="apidocSignatureSpan">(uri)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function parse(uri) {
+  var rtn;
+  var parts;
+  if ('object' == typeof uri) {
+    // re-use the `uri` Object if one is passed in
+    rtn = uri;
+    uri = rtn.uri;
+  } else {
+    rtn = { uri: uri };
+  }
+  var parsed = url.parse(uri);
+  if ('spotify:' == parsed.protocol) {
+    parts = uri.split(':');
+    parseParts(parts, rtn);
+  } else if ('embed.spotify.com' == parsed.hostname) {
+    return parse(qs.parse(parsed.query).uri);
+  } else { // http: or https:
+    parts = parsed.pathname.split('/');
+    parseParts(parts, rtn);
+  }
+  return rtn;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.spotify-playlist.uri.formatEmbedURL" id="apidoc.element.spotify-playlist.uri.formatEmbedURL">
+        function <span class="apidocSignatureSpan">spotify-playlist.uri.</span>formatEmbedURL
+        <span class="apidocSignatureSpan">(parsed)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function formatEmbedURI(parsed) {
+  return 'https://embed.spotify.com/?uri=' + formatURI(parsed);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.spotify-playlist.uri.formatOpenURL" id="apidoc.element.spotify-playlist.uri.formatOpenURL">
+        function <span class="apidocSignatureSpan">spotify-playlist.uri.</span>formatOpenURL
+        <span class="apidocSignatureSpan">(parsed, base)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function formatOpenURL(parsed, base) {
+  if ('string' == typeof parsed) parsed = parse(parsed);
+  if ('string' != typeof base) base = 'http://open.spotify.com';
+  if (parsed.starred) {
+    // user's "starred" playlist
+    return base + '/user/' + encode(parsed.user) + '/starred';
+  } else if ('playlist' == parsed.type) {
+    // user "playlist"
+    return base + '/user/' + encode(parsed.user) + '/playlist/' + parsed.id;
+  } else if ('local' == parsed.type) {
+    // "local" file
+    return base + '/local/' + encode(parsed.artist) +
+                        '/' + encode(parsed.album) +
+                        '/' + encode(parsed.track) +
+                        '/' + parsed.seconds;
+  } else if ('search' == parsed.type) {
+    // "search" query
+    return base + '/search/' + encode(parsed.query);
+  } else {
+    // artist, album, track
+    return base + '/' + parsed.type + '/' + parsed.id;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.spotify-playlist.uri.formatPlayURL" id="apidoc.element.spotify-playlist.uri.formatPlayURL">
+        function <span class="apidocSignatureSpan">spotify-playlist.uri.</span>formatPlayURL
+        <span class="apidocSignatureSpan">(parsed)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function formatPlayURL(parsed) {
+  return formatOpenURL(parsed, 'https://play.spotify.com');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.spotify-playlist.uri.formatURI" id="apidoc.element.spotify-playlist.uri.formatURI">
+        function <span class="apidocSignatureSpan">spotify-playlist.uri.</span>formatURI
+        <span class="apidocSignatureSpan">(parsed)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function formatURI(parsed) {
+  if ('string' == typeof parsed) parsed = parse(parsed);
+  if (parsed.starred) {
+    // user's "starred" playlist
+    return 'spotify:user:' + encode(parsed.user) + ':starred';
+  } else if ('playlist' == parsed.type) {
+    // user "playlist"
+    return 'spotify:user:' + encode(parsed.user) + ':playlist:' + parsed.id;
+  } else if ('local' == parsed.type) {
+    // "local" file
+    return 'spotify:local:' + encode(parsed.artist) +
+                        ':' + encode(parsed.album) +
+                        ':' + encode(parsed.track) +
+                        ':' + parsed.seconds;
+  } else if ('search' == parsed.type) {
+    // "search" query
+    return 'spotify:search:' + encode(parsed.query);
+  } else {
+    // artist, album, track
+    return 'spotify:' + parsed.type + ':' + parsed.id;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.spotify-playlist.uri.parse" id="apidoc.element.spotify-playlist.uri.parse">
+        function <span class="apidocSignatureSpan">spotify-playlist.uri.</span>parse
+        <span class="apidocSignatureSpan">(uri)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function parse(uri) {
+  var rtn;
+  var parts;
+  if ('object' == typeof uri) {
+    // re-use the `uri` Object if one is passed in
+    rtn = uri;
+    uri = rtn.uri;
+  } else {
+    rtn = { uri: uri };
+  }
+  var parsed = url.parse(uri);
+  if ('spotify:' == parsed.protocol) {
+    parts = uri.split(':');
+    parseParts(parts, rtn);
+  } else if ('embed.spotify.com' == parsed.hostname) {
+    return parse(qs.parse(parsed.query).uri);
+  } else { // http: or https:
+    parts = parsed.pathname.split('/');
+    parseParts(parts, rtn);
+  }
+  return rtn;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+/**
+ * Lookup a spotify playlist uri.
+ * @param  {String}   uri Spotify URI to lookup
+ * @param  {Function} cb  Callback
+ */
+Spotify.playlistUri = function(uri, extras, cb) {
+	var parsed = typeof uri === 'string' ? Spotify.uri.<span class="apidocCodeKeywordSpan">parse</span>(uri) : uri;
+
+	// Playlist
+	if (parsed.type === 'playlist') {
+		Spotify.playlist(parsed.user, parsed.id, typeof extras==='function'?extras:cb);
+	}
+	// Everything else
+	else {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
